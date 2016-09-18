@@ -1,0 +1,20 @@
+apply plugin: "war"
+
+dependencies {
+	compile project(':ns-webcore')
+	compile project(':ns-security')
+	compile project(':ns-student')
+	compile project(':ns-teacher')
+	compile project(':ns-course')
+	compile project(':ns-routine')
+	compile project(':ns-registration')
+}
+
+war {    
+	from('resources')  {
+        include '*.properties'
+		include '*.xml'
+        into 'WEB-INF/classes/'
+    }    
+    webXml = file('src/main/webapp/WEB-INF/web.xml')	
+}

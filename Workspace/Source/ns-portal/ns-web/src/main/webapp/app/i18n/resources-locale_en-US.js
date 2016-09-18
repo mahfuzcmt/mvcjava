@@ -1,0 +1,40 @@
+﻿[
+	{ "key": "Df1000", "value": "" },
+	{ "key": "Sc1001", "value": "Successfully Saved User" },
+	{ "key": "Nl1000", "value": "No Login ID Found" },
+	{ "key": "Nl1001", "value": "Enter Login ID" },
+	{ "key": "Nl1002", "value": "Enter Password" },
+	{ "key": "Ia1000", "value": "Inactive Login ID" },
+	{ "key": "Pw1000", "value": "Password does not match" },
+	{ "key": "Su1001", "value": "Successfully Update Password" },
+	{ "key": "Up1000", "value": "Unable to Update" },
+	{ "key": "Nd1000", "value": "No data found" },
+	{ "key": "Ed1000", "value": "Already Exist" },
+	{ "key": "Un1003", "value": "Unable to load data" },
+	{ "key": "Su1000", "value": "Successfully Updated" },
+	{ "key": "Su1002", "value": "Successfully Load User" },
+	{ "key": "Su1003", "value": "Successfully Load Role" },
+	{ "key": "Pw1001", "value": "New Password and Confirm Password does not match" },
+	{ "key": "Pmin1001", "value": "Password must be at least 6 digit" },
+	{ "key": "Vd1006", "value": "Please Enter Name" },
+	{ "key": "Vd1007", "value": "Please Enter Login ID" },
+	{ "key": "Vd1008", "value": "Please Enter Old Password" },
+	{ "key": "Vd1009", "value": "Please Enter New Password" },
+	{ "key": "Vd1010", "value": "Please Enter Confirm Password" },
+	
+	{ "key": "Us1000", "value": "Unable to Save" },
+	{ "key": "Sc1000", "value": "Successfully Saved" },
+	
+	{ "key": "UR1000", "value": "Unable to register" },
+	{ "key": "SR1000", "value": "Successfully registered" },
+	
+	{ "key": "mandatory", "value": "You can't leave this empty." },
+	{ "key": "emailInvalid", "value": "Please enter a valid email address." },
+	{ "key": "requiredMsg", "value": "Please input required data." },
+	{ "key": "SCP001", "value": "Successfully Changed Password" },
+	{ "key": "UCP002", "value": "Unable to Change Password" },
+	{ "key": "INVP003", "value": "Invalid Old Password" },	
+	{ "key": "SD100", "value": "Successfully deleted" },
+	{ "key": "UD100", "value": "Unable to delete " }
+	
+]

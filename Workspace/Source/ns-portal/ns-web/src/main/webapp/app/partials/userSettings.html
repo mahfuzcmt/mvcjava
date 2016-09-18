@@ -1,0 +1,26 @@
+
+ 
+<div class="modal-header">
+	<h3><i class="fa fa-cog fa-spin"></i> {{modalOptions.headerText}}</h3>
+</div>
+<form>
+	<div class="modal-body">
+		<div class="form-group">
+			<label>Item Per Page</label>
+			<select data-ng-model="modalOptions.itemsPerPage" ui-select2 class="form-control" style="padding: 0px;" data-placeholder="Select Status">
+               	<option  data-ng-selected="{{obj.value == modalOptions.preItemsPerPage}}" data-ng-repeat="obj in modalOptions.itemsPerPageList" value="{{obj.value}}">{{obj.value}}</option>
+           	</select>
+		</div>
+		<div class="form-group">
+			<label>Default View</label>
+			<select data-ng-model="modalOptions.defaultview" ui-select2 class="form-control" style="padding: 0px;" data-placeholder="Select Status">
+               	<option data-ng-selected="{{obj.value == modalOptions.preDfaultview}}" data-ng-repeat="obj in modalOptions.viewStyle" value="{{obj.value}}">{{obj.value}}</option>
+           	</select>
+		</div>
+		
+	</div>
+	<div class="modal-footer">
+ 		 <button type="button" class="btn btn-default btn-sm" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+  		<button class="btn btn-primary" data-ng-click="modalOptions.ok(modalOptions);">{{modalOptions.actionButtonText}}</button>
+	</div>
+</form>

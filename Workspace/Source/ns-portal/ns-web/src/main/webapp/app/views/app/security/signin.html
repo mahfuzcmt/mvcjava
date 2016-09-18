@@ -1,0 +1,32 @@
+<section class="signinBG">
+    <div class="row"  >
+        <div class="col-md-12">
+			<div class="form-box" id="login-box">
+	            <div class="header" style="background-color:#F6FAF5">Sign In 
+	            	<span style="float:right;font-size:22px;"> 
+	            		<strong class="uni" style="font-size: 18px !important;">Notification </strong><strong class="verge" style="font-size: 18px !important;">System</strong>
+	            	</span>
+	            </div>
+	            <form method="post">
+	                <div class="body bg-custom">       
+	                    <div class="form-group" >
+	                        <span data-ng-show="login.msg != 'Df1000'" style="color: red" data-i18n="{{login.msg}}"></span>
+	                    </div>
+	                    <div class="form-group">
+	                        <input type="text" id="usertxt" data-ng-model="login.loginID" name="loginID" class="form-control" placeholder="Login ID" required autofocus="autofocus" />
+	                    </div>
+	                    <div class="form-group">
+	                        <input type="password" id="passtxt" data-ng-model="login.password" name="password" class="form-control" placeholder="Password" required />
+	                    </div>  
+	                    <div class="form-group">
+	                        <button type="submit" class="btn btn-block" style="background-color:#779A52;color:white;"  ng-click="signIn(login)">Sign me in</button> 
+	                    </div>
+	                </div>
+	            </form>
+	        </div>
+        </div>
+    </div>
+	<div class="panel-footer" style="text-align:center; margin-top:16%;">
+	     <span  class="text-muted copyrightFont">&copy 2016 ns 1.0 developed by department of CSE</strong></strong>
+	</div>
+</section>

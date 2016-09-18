@@ -1,0 +1,130 @@
+<section class="content-header">
+	<h1>
+		List of Role <small></small>
+	</h1>
+	<ol class="breadcrumb">
+		<li><a href="#/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li>Settings</li>
+		<li class="active">Role Management</li>
+	</ol>
+</section>
+<!-- Main content -->
+<div ng-include="'app/partials/userSettingsDiv.html'"></div>
+ <section class="content">
+ 	<div class="row">
+		<div class="col-md-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+ 	<div class ="row">
+ 		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-body" style="margin-bottom: -10px;">
+					<div class="inner">
+						<div class="row">
+							<div class="col-md-5 margin-top-5">
+								<a class="ovalButton" data-ng-click="gotonewRole()"><i class="fa fa-plus"> Add Role</i></a>
+							</div>	
+							<!-- <div class="col-md-3 margin-top-5">
+								<span class="text-muted" style="font-size: 85%;" data-ng-show = "btnOff" >{{btnFilterText}}<a ng-click="filterOff()" style="cursor:pointer;">{{linkText}}</a></span>
+		   						<span class="text-muted" style="font-size: 85%;"data-ng-show = "btnOn" >{{btnFilterText}}<a ng-click="filterOn()" style="cursor:pointer;">{{linkText}}</a></span>
+							</div> -->
+							<div class="col-md-3 marginTop5 pull-right">
+								<input style="height:34px !important;" data-ng-change="searchByRole(searchText);" type="text" name="table_search" class="form-control input-sm clientSearch" placeholder= "Search by role or role ID" data-ng-model="searchText"/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ 	</div>
+	<div class ="row">
+ 		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-header with-border" style="margin-left:10px;margin-right:10px;margin-top:10px">
+					<div class="row show-hide-animation" >
+						<div class="col-md-3" style="margin-top:-5px">
+							<h5 data-ng-show="rowCollection.length > 0">{{ pageItemText }}</h5>
+							<h5 data-ng-show="rowCollection.length == 0">No Role Found</h5>
+						</div>
+						<div class="col-md-4" style="text-align:right; margin-top: -6px;">
+							<!-- <label>Partner Type:</label> -->
+							 <span data-i18n="{{alert.msg}}"></span>
+							 <span  >Item per page &nbsp;</span>
+								{{pageItem.size15}} &nbsp;<input  type="checkbox" data-ng-model="size15" ng-change="setPageSize('15');"/>
+								{{pageItem.size30}} &nbsp;<input  type="checkbox" data-ng-model="size30" ng-change="setPageSize('30');"/>
+								{{pageItem.size60}} &nbsp;<input  type="checkbox" data-ng-model="size60" ng-change="setPageSize('60');"/>
+								{{pageItem.size100}} &nbsp;<input type="checkbox" data-ng-model="size100" ng-change="setPageSize('100');"/>
+						</div>
+						<div class="col-md-5" style="margin-top: -5px;">
+								<pagination data-ng-model="currentPage" data-total-items="totalRole" 
+								data-boundary-links="true" data-max-size="maxPaginationSize" data-items-per-page="itemsPerPage"></pagination>
+						</div>
+					</div>
+				</div>
+				<div class="box-body" style="margin-bottom: -10px;">
+					<div class="inner">
+							   <div class="row">
+							    <div class="col-md-12">
+							     <div class="box">
+							      <div class="box-body">
+							       <div class="row"> 
+							      </div>
+							      <table st-table="displayedCollection" class="table table-striped smartTableFont"  st-safe-src="rowCollection">
+							       <thead>
+							        <tr>
+								        <th class="text-left" >#</th>
+			                            <th class="text-left">Role ID</th>
+			                            <th class="text-left">Type</th>
+			                            <th class="text-left">Role</th>
+			                            <th class="text-center">Operation</th>
+									</tr>
+							       </thead>
+							       <tbody>
+							       		<tr data-ng-repeat="role in displayedCollection">
+							       			<td class="text-left" >{{$index+1}}</td>
+				                            <td class="text-left" >{{role.roleID}}</td>
+				                            <td class="text-left" >{{role.roleType}}</td>
+				                            <td class="text-left" >{{role.roleDescription}}</td>
+				                            <td class="text-center" >
+				                            	<button class="btn btn-mini EditIcon" data-ng-click="goEditPage(role)"><i class="fa fa-pencil-square-o" style="color:#FFFFFF;"></i></button>
+				                            	<button class="btn btn-danger btn-sm" data-ng-click="deleteRole(role)"><i class="fa fa-trash-o" style="color:#FFFFFF;"></i></button>
+				                            </td>
+				                        </tr>
+							       </tbody>
+							      </table>
+							     </div>
+							    </div>
+							   </div>
+							  </div>
+					</div>
+				</div>
+				<div class="box-footer">
+						<div class="row show-hide-animation" >
+							<div class="col-md-3">
+								<h5 data-ng-show="rowCollection.length > 0">{{ pageItemText }}</h5>
+								<h5 data-ng-show="rowCollection.length == 0">No Role Found</h5>
+							</div>
+							<div class="col-md-4" style="text-align:right">
+								<!-- <label>Partner Type:</label> -->
+							<span data-i18n="{{alert.msg}}"></span>
+							 <span  >Item per page &nbsp;</span>
+								{{pageItem.size15}} &nbsp;<input  type="checkbox" data-ng-model="size15" ng-change="setPageSize('15');"/>
+								{{pageItem.size30}} &nbsp;<input  type="checkbox" data-ng-model="size30" ng-change="setPageSize('30');"/>
+								{{pageItem.size60}} &nbsp;<input  type="checkbox" data-ng-model="size60" ng-change="setPageSize('60');"/>
+								{{pageItem.size100}} &nbsp;<input type="checkbox" data-ng-model="size100" ng-change="setPageSize('100');"/>
+							</div>
+							<div class="col-md-5">
+									<pagination data-ng-model="currentPage" data-total-items="totalRole" 
+									data-boundary-links="true" data-max-size="maxPaginationSize" data-items-per-page="itemsPerPage"></pagination>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+
+
+
+ 

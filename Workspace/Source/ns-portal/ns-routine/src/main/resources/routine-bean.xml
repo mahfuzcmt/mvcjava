@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- Manager Classes --> 	
+	<bean id="routineQueryManager" class="edu.vub.ns.routine.manager.impl.RoutineMySqlQueryManagerImpl" parent="queryManager" />
+	
+    <bean id="routineManager" class="edu.vub.ns.routine.manager.impl.RoutineManagerImpl" parent="manager">
+        <property name="routineQueryManager" 				ref="routineQueryManager"/>  
+    </bean>
+	 
+	<bean id="routineService" class="edu.vub.ns.routine.rest.service.RoutineService">
+	    <property name="routineManager" 				ref="routineManager"/>  
+	</bean>
+</beans>
+

@@ -1,0 +1,14 @@
+
+<div class="modal-header modal-header-confirm">
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true" data-ng-click="modalOptions.close()">X</button>
+	<h4 class="modal-title ng-binding">
+		<span class="glyphicon glyphicon-check"></span> {{modalOptions.headerText}}
+	</h4>
+</div>
+
+<div class="modal-body">
+	<iframe id="fred" style="border: 1px solid #666CCC"
+		title="PDF in an i-Frame" src="{{modalOptions.bodyText}}" frameborder="1"
+		scrolling="auto" height="480" width="100%" name="report"></iframe>
+</div>
+

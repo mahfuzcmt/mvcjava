@@ -1,0 +1,57 @@
+@import
+	url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic)
+	;
+
+@import url(http://fonts.googleapis.com/css?family=Kaushan+Script);
+/*! 
+ *   Sublime BD v1.0
+ *   Author: Iqbal
+ *   License: Open source - MIT
+ *           Please visit http://opensource.org/licenses/MIT for more information
+!*/
+/*
+    Core: General style
+----------------------------
+*/
+
+input[type=checkbox] { 
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0
+}
+input[type=checkbox]:after {
+ /*  padding-right: 3px;
+  top: 1px;
+  font-family: 'Arial' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  content: '\f096';
+  color: #333;
+  display:block; */
+  padding-right: 3px;
+    top: -0px;
+    font-family: 'Arial' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    content: '\2610';
+    color: #333;
+    display: block;
+    outline: 0px auto -webkit-focus-ring-color !important;
+}
+input[type=checkbox]:checked:after {
+ /*  content: '\2714';
+  color: #337ab7 */
+  content: '\2611';
+  color: #000c00;
+  outline: 0px auto -webkit-focus-ring-color !important;
+}
+
+input[type=file]:focus, input[type=checkbox]:focus, input[type=radio]:focus {
+    outline: thin dotted; 
+    outline: 0px auto -webkit-focus-ring-color !important; 
+    outline-offset: -2px; 
+}

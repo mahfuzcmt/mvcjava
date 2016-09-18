@@ -1,0 +1,63 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<bean id="springTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- Util Classes -->
+	<!-- <bean id="restClient" class="edu.vub.ns.webcore.util.RestClient"> 
+		<constructor-arg type="java.lang.String" value="${rest.user}"/> <constructor-arg 
+		type="java.lang.String" value="${rest.password}"/> </bean> -->
+	<bean id="idGenerator" class="edu.vub.ns.webcore.manager.impl.IdGeneratorImpl" />
+	<!-- <bean id="queryManager" class="edu.vub.ns.webcore.manager.impl.PostgreSqlQueryManagerImpl" 
+		/> -->
+	<bean id="queryManager"
+		class="edu.vub.ns.webcore.manager.impl.MySqlQueryManagerImpl" />
+	<!-- <bean id="sessionManager" class="edu.vub.ns.webcore.manager.impl.SessionManagerImpl" />
+	<bean id="reportUtil" class="edu.vub.ns.webcore.util.ReportUtil"
+		init-method="init">
+		<property name="folderName" value="${report.folder}" />
+		<property name="dataSource" ref="dataSource" />
+	</bean> -->
+
+	
+
+
+	<!-- Dao Classes -->
+	<bean id="simpleJdbcDao" class="edu.vub.ns.webcore.dao.impl.SimpleJdbcDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="springJdbcDao" class="edu.vub.ns.webcore.dao.impl.SpringJdbcDaoImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="transactionManager" ref="springTransactionManager"></property>
+	</bean>
+
+	<!-- <bean id="dataProviderUtil" class="edu.vub.ns.webcore.util.DataProviderUtil" /> -->
+
+    <!-- Manager Classes -->
+     
+     <bean id="reportUtil" class="edu.vub.ns.webcore.util.ReportUtil" init-method="init">
+		<property name="folderName" 					value="${report.folder}" />
+	</bean>
+	<bean id="csvreportUtil" class="edu.vub.ns.webcore.util.CSVReportUtil" init-method="init">
+		<property name="folderName" 					value="${report.folder}" />
+	</bean>
+	  	
+	<bean id="manager" class="edu.vub.ns.webcore.manager.impl.ManagerImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="queryManager" 		ref="queryManager" />
+		<property name="idGenerator" 		ref="idGenerator" />
+		<property name="springJdbcDao" 		ref="springJdbcDao" />
+		<property name="simpleJdbcDao" 		ref="simpleJdbcDao" />
+		<property name="reportUtil" 		ref="reportUtil"/>  
+		<property name="csvreportUtil" 		ref="csvreportUtil"/> 
+	</bean>
+	<bean id="fileService" class="edu.vub.ns.webcore.rest.service.FileService" />
+
+</beans>

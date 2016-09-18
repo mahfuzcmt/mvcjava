@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- Manager Classes --> 	
+	<bean id="securityQueryManager" class="edu.vub.ns.security.manager.impl.SecurityMySqlQueryManagerImpl" parent="queryManager" />
+	
+	<bean id="sessionManager" class="edu.vub.ns.security.manager.impl.SessionManagerImpl" />
+	
+	<bean id="dataProviderUtil" class="edu.vub.ns.security.util.DataProviderUtil" />
+	
+    <bean id="securityManager" class="edu.vub.ns.security.manager.impl.SecurityManagerImpl" parent="manager">
+        <property name="securityQueryManager" 				ref="securityQueryManager"/>  
+        <property name="sessionManager" 					ref="sessionManager"/>  
+    </bean>
+	<bean id="loginManager" class="edu.vub.ns.security.manager.impl.LoginManagerImpl" parent="securityManager" />
+    <bean id="userManager" class="edu.vub.ns.security.manager.impl.UserManagerImpl" parent="securityManager" />
+	 <bean id="roleManager" class="edu.vub.ns.security.manager.impl.RoleManagerImpl" parent="securityManager" />
+	 
+	<bean id="loginService" class="edu.vub.ns.security.rest.service.LoginService">
+	    <property name="loginManager" 				ref="loginManager"/>  
+	</bean>
+	<bean id="userService" class="edu.vub.ns.security.rest.service.UserService">
+	    <property name="userManager" 				ref="userManager"/>  
+	</bean>
+	<bean id="roleService" class="edu.vub.ns.security.rest.service.RoleService">
+	    <property name="roleManager" 				ref="roleManager"/>  
+	</bean>
+	
+</beans>
+

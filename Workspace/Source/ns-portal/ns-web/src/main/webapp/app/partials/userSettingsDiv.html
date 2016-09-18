@@ -1,0 +1,35 @@
+<section class="content">
+	<div class="row partner-cssSlideUp" data-ng-show="settingsOption">
+		<div class="col-md-12">
+			<div class="box box-primary">
+				<div class="box-header with-border margin-left-5">
+					<h5>Settings
+						<div class="pull-right margin-right-5">
+							<span  data-ng-click="closeSettings()"><i style="color:red" class="fa fa-times-circle-o color-danger link-pointer"></i></span>
+						</div>
+					</h5>
+				</div>
+				<div class="box-body">
+					<div class="row">
+							<div class="col-md-2"><label>Item Per page</label></div>
+							<div class="col-md-1" data-ng-repeat ="obj in itemsPerPageData" >
+								<label class="label-statistics-criteria">
+									<input type="radio" name="itemsPerPage" data-ng-model="selected.itemsPerPage" value="{{obj.value}}"> {{obj.value}}
+								</label>
+							</div>
+							<div class="col-md-2"><label>Default View</label></div>
+							<div class="col-md-1" data-ng-repeat ="obj in viewStyle" >
+								<label class="label-statistics-criteria">
+									<input type="radio" name="defaultView" data-ng-model="selected.defaultview" value="{{obj.value}}"> {{obj.value}}
+								</label>
+							</div>
+				        <div class="col-md-2">     
+						   	<button class="btn btn-primary" data-ng-click="setUserSettings(selected);">Save</button>
+							<button type="button" class="btn btn-default btn-sm" data-ng-click="closeSettings()">cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

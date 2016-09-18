@@ -1,0 +1,70 @@
+<section class="content-header">
+	<div class="univerge-header">
+		Schedule
+	</div>
+	<ol class="breadcrumb">
+		<li><a href="#/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Student>Provisioning</li>
+	</ol>
+</section>
+
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+
+	<div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Notification Corner</h3>
+                </div>
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h5 class="box-title font-size-14">Criteria</h5>
+					</div>
+					<div class="box-body">
+						<div class=" row">
+							<div class='col-md-6'>
+								<label class="inline-form-Label">Course<span class="mandatory">*</span></label>
+								<select data-placeholder="Choose Course" multiple chosen="courseList" class="univergeForm chosen-choices inline-multi-select"
+									data-ng-model="info.courses"  data-ng-options="course.name for course in courseList" ng-disabled="isDisabled" value="course.oid">
+								</select> 
+							</div>
+							<div class='col-md-6'>
+								<label class="inline-form-Label" >Shift<span class="mandatory">*</span></label>
+								<input type="radio" class="margin-top-10" data-ng-model="info.shift" name="shift" value="day"> <span>Day</span>
+								<input type="radio" class="margin-top-10" data-ng-model="info.shift" name="shift" value="eve"><span> Evening</span>
+							</div>	 
+						</div>
+						<div class=" row">
+							<div class='col-md-6'>
+								<label class="inline-form-Label">Activity</label>
+								<select  ui-select2  class="univergeForm mgrBtm5" name="activity" data-ng-model="obj.partnerType" data-placeholder="Choose an Activity" required>
+									<option></option>
+		                             <option value="classTest">Class Test</option>
+		                             <option value="quizTest">Quiz Test</option>
+		                             <option value="makeupClass">Makeup Class</option>
+		                             <option value="cancel">Cancel Class</option>
+								</select> 
+							</div>
+							<div class='col-md-6'>
+								<label class="inline-form-Label">Detail</label>
+								<textarea type="text" data-ng-model="info.detail" id="detail" class="univergeForm" />
+							</div>
+						</div>
+					</div>
+					<div class="box-footer">
+						<button class="btn btn-default" data-ng-click="reset()">Reset</button>
+						<button type="submit" class="btn btn-primary" data-ng-click="notify(info)">Notify</button>
+					</div>
+				</div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+

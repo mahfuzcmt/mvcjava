@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns="http://java.sun.com/xml/ns/javaee"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+		id="WebApp_ID"
+		version="3.1">
+	
+	<display-name>uniVerge</display-name>
+	
+	<!-- <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param> -->
+    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+       <param-value>classpath:applicationContext.xml</param-value>
+    </context-param>
+    
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+	<servlet>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+
+			<param-value>edu.vub.ns.security.rest.service; edu.vub.ns.webcore.rest.service, edu.vub.ns.student.rest.service; edu.vub.ns.teacher.rest.service;
+	 		edu.vub.ns.course.rest.service; edu.vub.ns.routine.rest.service; edu.vub.ns.registration.rest.service</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.server.provider.classnames</param-name>
+			<param-value>org.glassfish.jersey.media.multipart.MultiPartFeature</param-value>
+		</init-param>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+
+	<welcome-file-list>
+	  <welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+		
+
+</web-app>

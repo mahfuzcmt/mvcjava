@@ -1,0 +1,24 @@
+<div class="modal-header">
+	<h4 class="modal-title ng-binding">
+		<span class="glyphicon glyphicon-check"></span> {{modalOptions.headerText}}
+	</h4>
+</div>
+<div class="modal-body">
+  <div class="row" >
+  	<div class="col-md-10">
+  		<select ng-if ="modalOptions.purpose != 'node' " data-placeholder="Select item" multiple chosen="modalOptions.dataList" class="form-control chosen-choices"
+				data-ng-model="modalOptions.selectedList"  data-ng-options="data.partnerName for data in modalOptions.dataList" ng-disabled="isDisabled" value="data.partnerID">
+		</select>
+		<select ng-if ="modalOptions.purpose == 'node' " data-placeholder="Select item" multiple chosen="modalOptions.dataList" class="form-control chosen-choices"
+				data-ng-model="modalOptions.selectedList"  data-ng-options="data.name for data in modalOptions.dataList" ng-disabled="isDisabled" value="data.nadeID">
+		</select>
+  	</div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default btn-sm" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+  <button type="button" class="btn btn-primary" data-ng-click="modalOptions.ok(modalOptions)">{{modalOptions.activeButtonText}}</button>
+  <button class="btn btn-danger" data-ng-click="modalOptions.inactivate(modalOptions);">{{modalOptions.inactiveButtonText}}</button>
+</div>
+
+

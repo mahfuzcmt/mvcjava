@@ -1,0 +1,31 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:security="http://www.springframework.org/schema/security"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+ 
+	<context:annotation-config />
+
+	<context:property-placeholder location="classpath:jdbc.properties" />
+
+	<context:component-scan base-package="edu.vub.ns.security.rest.service,edu.vub.ns.webcore.rest.service, edu.vub.ns.student.rest.service, edu.vub.ns.teacher.rest.service,
+	 edu.vub.ns.course.rest.service, edu.vub.ns.routine.rest.service, edu.vub.ns.registration.rest.service" />
+
+	
+	<!-- Bean Declaration -->
+	<import resource="classpath*:datasource.xml"/>	
+    <import resource="classpath*:webcore-bean.xml"/>
+    <import resource="classpath*:security-bean.xml"/>
+    <import resource="classpath*:student-bean.xml"/>
+    <import resource="classpath*:teacher-bean.xml"/>
+    <import resource="classpath*:course-bean.xml"/>
+    <import resource="classpath*:routine-bean.xml"/>
+    <import resource="classpath*:registration-bean.xml"/>
+        
+    
+     
+</beans>

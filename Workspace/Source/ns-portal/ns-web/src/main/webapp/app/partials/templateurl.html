@@ -1,0 +1,14 @@
+
+<div class="slider sliderPanel">
+	<div class="slide" data-ng-repeat="image in images" ng-show="image.visible">
+	    <img data-ng-src="{{image.src}}" width = "{{image.width}}" style = "height: {{image.height}}"/>
+	</div>
+	<div class="arrows">
+		<a data-ng-click="prev()">
+	    	<img src="img/left-arrow.png" />
+	    </a>
+	    <a data-ng-click="next()">
+	    	<img src="img/right-arrow.png" />
+	    </a>
+	</div>
+</div>

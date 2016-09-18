@@ -1,0 +1,13 @@
+[
+  {
+    "name": "operatorType",
+    "data": [
+      {
+        "value": "FIXED"
+      },
+      {
+        "value": "MOBILE"
+      }
+    ]
+  }
+]

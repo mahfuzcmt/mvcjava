@@ -1,0 +1,22 @@
+*.metadata
+*.classpath
+*.project
+*.settings
+*.class
+*bin
+*.idea
+*.iml
+*.CDR
+*.DS_Store
+.sonarlint
+.gradle
+*build
+*classes
+*.dat
+.recommenders
+/Workspace/Source/ns-portal/Servers/Tomcat v8.0 Server at localhost-config/*.policy
+/Workspace/Source/ns-portal/Servers/Tomcat v8.0 Server at localhost-config/web.xml
+/Workspace/Source/ns-portal/Servers/Tomcat v8.0 Server at localhost-config/tomcat-users.xml
+/Workspace/Source/ns-portal/Servers/Tomcat v8.0 Server at localhost-config/server.xml
+/Workspace/Source/ns-portal/Servers/Tomcat v8.0 Server at localhost-config/context.xml
+/Workspace/Source/ns-portal/Servers/Tomcat v8.0 Server at localhost-config/catalina.properties

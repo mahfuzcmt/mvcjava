@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="author" content="Md. Kamruzzaman Tanim">
+		<link rel="icon" href="images/favicon.ico">
+	    <title>{{pageTitle}}</title>
+        
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/app.css"/>
+
+		<!-- Lib JS -->
+		<script type="text/javascript" src="js/jquery.min-1.11.2.js"></script>	
+		<script type="text/javascript" src="Scripts/highchart/highcharts.js"></script>
+		<script type="text/javascript" src="Scripts/highchart/highcharts-3d.js"></script>	
+		<script type="text/javascript" src="Scripts/highchart/exporting.js"></script>
+		<script type="text/javascript" src="Scripts/highchart/map.js"></script>
+		<script type="text/javascript" src="Scripts/highchart/world.js"></script>
+
+		<script type="text/javascript" src="Scripts/other/moment.js"></script>
+		<script type="text/javascript" src="Scripts/other/moment-range.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="Scripts/other/jasny-bootstrap.js"></script>
+		<!-- <script type="text/javascript" src="Scripts/other/daterangepicker.js"></script> -->
+		<script type="text/javascript" src="js/jquery.blueimp-gallery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-image-gallery.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-animate.js"></script>
+		<script type="text/javascript" src="js/angular-cookies.js"></script>
+		<script type="text/javascript" src="js/angular-loader.js"></script>
+		<script type="text/javascript" src="js/angular-messages.js"></script>
+		<script type="text/javascript" src="js/angular-mocks.js"></script>
+		<script type="text/javascript" src="js/angular-resource.js"></script>
+		<script type="text/javascript" src="js/angular-route.js"></script>
+		<script type="text/javascript" src="js/angular-sanitize.js"></script>
+		<script type="text/javascript" src="js/angular-touch.js"></script>
+		<script type="text/javascript" src="js/localize.js"></script>
+	    <script type="text/javascript" src="Scripts/other/chosen.jquery.js"></script> 
+	    <script type="text/javascript" src="Scripts/fullcalendar/fullcalendar.min.js"></script> 
+		<!-- Lib JS -->
+		
+	
+		<script type="text/javascript" src="js/plugins/iCheck/icheck.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script type="text/javascript" src="Scripts/other/select2.js"></script>
+		<script type="text/javascript" src="Scripts/jquery/jquery-ui-1.10.3.min.js"></script>
+		<script type="text/javascript" src="js/plugins/timepicker/jquery-ui-timepicker-addon.js"></script>
+		
+		<script type="text/javascript" src="Scripts/jquery/jquery.numeric.js"></script>
+		<script type="text/javascript" src="Scripts/other/underscore.js"></script>
+		<script type="text/javascript" src="Scripts/bootstrap/bootstrap-switch.js"></script>
+		<!-- <script type="text/javascript" src="Scripts/bootstrap/bootstrap-datepicker.js"></script> -->
+		<script type="text/javascript" src="Scripts/bootstrap/bootstrap-table.js"></script>
+		<script type="text/javascript" src="Scripts/angular/angular-underscore-module.js"></script>
+		<script type="text/javascript" src="Scripts/angular/angular-ui-bootstrap.js"></script>
+		<script type="text/javascript" src="Scripts/angular/angular-file-upload.js"></script>
+		<script type="text/javascript" src="Scripts/angular/ng-maps.js"></script>
+		<script type="text/javascript" src="Scripts/angular/ng-table.js"></script>
+		<script type="text/javascript" src="Scripts/angular/ngProgress.js"></script>
+		<script type="text/javascript" src="Scripts/angular/ng-bs-daterangepicker.js"></script>
+		<script type="text/javascript" src="Scripts/bootstrap/ui-bootstrap-0.11.0.js"></script>
+	    <script type="text/javascript" src="Scripts/bootstrap/ui-bootstrap-tpls-0.13.1.js"></script>
+		<script type="text/javascript" src="Scripts/angular/angular-ui.js"></script>
+		<script type="text/javascript" src="Scripts/angular/angular-ui-select2.js"></script>
+		<script type="text/javascript" src="Scripts/highchart/highcharts-ng.js"></script>
+		<script type="text/javascript" src="Scripts/other/date.js"></script>
+		<script type="text/javascript" src="Scripts/other/jquery.metisMenu.js"></script>
+		<script type="text/javascript" src="Scripts/other/jquery.easy-ticker.js"></script>
+		<script type="text/javascript" src="Scripts/other/lightbox.js"></script>
+		<script type="text/javascript" src="Scripts/other/custom.js"></script>
+		<script type="text/javascript" src="Scripts/smarttable/smart-table.js"></script>
+		<script type="text/javascript" src="Scripts/d3/d3.v3.min.js"></script>
+   		<link rel="stylesheet" type="text/css" href="css/lib/chosen.css"/>   
+   		
+	    <!-- Load custom scripts via RequireJS -->
+	    <script type="text/javascript" src="Scripts/require/require.js" data-main="Scripts/main"></script>
+        
+    </head>
+    
+    <body class="skin-blue">
+        
+        <header class="header" data-ng-show="layout.header.isVisible" data-ng-include="layout.header.location">
+            
+        </header>
+        
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+            <aside class="left-side sidebar-offcanvas" data-ng-show="layout.leftPanel.isVisible" data-ng-include="layout.leftPanel.location" data-ng-class="{myleftside: !isWeb}">
+            
+            </aside>
+
+            <aside class="right-side view-slide-in" data-ng-view>
+                
+            </aside>
+        </div>
+        
+        
+        <!-- Loading Window -->
+	    <div id="overlay" class="web_dialog_overlay"></div>
+	    <div id="dialog" class="web_dialog"></div>
+	    
+	    <div id="blueimp-gallery" class="blueimp-gallery">
+			<!-- The container for the modal slides -->
+			<div class="slides"></div>
+			<!-- Controls for the borderless lightbox -->
+			<h3 class="title"></h3>
+			<a class="prev">‹</a>
+			<a class="next">›</a>
+			<a class="close">×</a>
+			<a class="play-pause"></a>
+			<ol class="indicator"></ol>
+			<!-- The modal dialog, which will be used to wrap the lightbox content -->
+			<div class="modal fade">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" aria-hidden="true">&times;</button>
+							<h4 class="modal-title"></h4>
+						</div>
+						<div class="modal-body next"></div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default pull-left prev">
+								<i class="glyphicon glyphicon-chevron-left"></i>
+								Previous
+							</button>
+							<button type="button" class="btn btn-primary next">
+								Next
+								<i class="glyphicon glyphicon-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

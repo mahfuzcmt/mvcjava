@@ -1,0 +1,5 @@
+[
+	{"text": "10 min", "value" : 600000},
+	{"text": "30 min", "value" : 1800000},
+	{"text": "60 min", "value" : 3600000}
+]

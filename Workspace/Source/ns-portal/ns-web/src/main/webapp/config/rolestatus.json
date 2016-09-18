@@ -1,0 +1,4 @@
+[
+	{ "value" : "A", "displayText" : "Active" },
+	{ "value" : "I", "displayText" : "Inactive" }
+]

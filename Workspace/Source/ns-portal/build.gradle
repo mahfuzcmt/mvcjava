@@ -1,0 +1,66 @@
+subprojects {
+	apply plugin: "java"
+	apply plugin: 'eclipse-wtp'
+	apply plugin: "maven"
+	apply plugin: "idea"
+	apply plugin: "jacoco"
+	apply plugin: "project-report"
+
+	//version = "1.0"
+	group = "edu.vub.ns"
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	
+	repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+    maven { url "http://repo1.maven.org/maven2" }
+    maven { url "http://files.couchbase.com/maven2/" }
+    maven { url "https://maven.java.net/content/groups/promoted" }
+    maven { url "http://repository.pentaho.org/artifactory/repo/" }
+    maven { url "https://repository.apache.org/content/repositories/snapshots" }
+	maven { url "http://repo.spring.io/libs-release" }
+}
+	
+	sourceSets {
+	main {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+	test {
+        java {
+            srcDir 'src/java'
+        }
+        resources {
+            srcDir 'src/resources'
+        }
+    }
+}
+
+}
+
+def tstamp = new Date().format("yyyy-MM-dd_HH-mm-ss")
+def buildLogDir = "${rootDir}/build/logs"
+mkdir("${buildLogDir}")
+def buildLog = new File("${buildLogDir}/${tstamp}_buildLog.log")
+
+import org.gradle.logging.internal.*
+System.setProperty("org.gradle.color.error", "RED")
+
+gradle.services.get(LoggingOutputInternal).addStandardOutputListener (new StandardOutputListener () {
+    void onOutput(CharSequence output) {
+        buildLog << output
+    }
+})
+
+gradle.services.get(LoggingOutputInternal).addStandardErrorListener (new StandardOutputListener () {
+    void onOutput(CharSequence output) {
+        buildLog << output
+    }
+})

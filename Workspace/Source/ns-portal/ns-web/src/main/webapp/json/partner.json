@@ -1,0 +1,103 @@
+[
+  {
+    "name": "partnerTypeIGW",
+    "data": [      
+      {
+        "name": "ANS"
+      },
+      {
+        "name": "INT"
+      },
+      {
+        "name": "IOS"
+      }
+    ]
+  },
+  {
+    "name": "partnerTypeIOS",
+    "data": [
+      {
+        "name": "IGW"
+      },
+      {
+        "name": "ICX"
+      },
+      {
+        "name": "ANS"
+      },
+      {
+        "name": "INT"
+      },
+      {
+        "name": "IOS"
+      },
+      {
+        "name": "IGWSBC"
+      }
+    ]
+  },  
+  {
+    "name": "hourlyDailyType",
+    "data": [      
+      {
+        "name": "Daily"
+      },
+      {
+        "name": "Hourly"
+      }
+    ]
+  },  
+  {
+    "name": "currency",
+    "data": [
+      {
+        "name": "USD"
+      },
+      {
+        "name": "BD"
+      }
+    ]
+  },
+  {
+    "name": "cycle",
+    "data": [
+      {
+        "name": "Monthly", "value": "MN"
+      },
+      {
+        "name": "Weekly", "value": "WK"
+      },
+       {
+        "name": "Fortnightly", "value": "Fortnightly"
+      },
+       {
+        "name": "Not Applicable", "value": "NA"
+      }
+    ]
+  },
+  {
+    "name": "paymentType",
+    "data": [
+      {
+        "name": "Postpaid", "value": "PA"
+      },
+      {
+        "name": "Prepaid", "value": "PB"
+      },
+       {
+        "name": "Not Applicable", "value": "NA"
+      }
+    ]
+  },
+  {
+    "name": "status",
+    "data": [
+      {
+        "name": "Active", "value": "A"
+      },
+      {
+        "name": "Inactive", "value": "I"
+      }
+    ]
+  }
+]

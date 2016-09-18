@@ -1,0 +1,32 @@
+<div class="statistic-criteria-to-show" data-ng-show="criteriaOption">
+	<div class="col-md-12 margin-bottom-5">
+        <div class="box-body">
+			 <div class="col-md-12">
+			 <span class="pull-right" data-ng-click="closeSettings()"><i style="color:red" class="fa fa-times-circle-o color-danger link-pointer"></i></span>
+			 	<div class="col-md-1">
+			 		<label class="margin-top-5">Node</label>
+			 	</div>
+			 	<div class="col-md-2" >
+			 		<label class="label-statistics-criteria" data-ng-click="setDefaultNode('All');">
+						<input type="radio" name="node" data-ng-model="defaultNode" value="{{'All'}}"> All
+					</label>
+				</div>
+				<div class="col-md-2" data-ng-repeat ="node in nodesList" >
+					<label class="label-statistics-criteria" data-ng-click="setDefaultNode(node.nodeID);">
+						<input type="radio" name="node" data-ng-model="defaultNode" value="{{'node.nodeID'}}"> {{node.name}}
+					</label>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="col-md-1">
+			 		<label class="margin-top-5">Interval</label>
+			 	</div>
+				<div class="col-md-2 margin-bottom-5" data-ng-repeat ="intervalTime in intervalTimeList" >
+					<label class="label-statistics-criteria" data-ng-click="setIntervalTime(intervalTime.value);">
+						<input type="radio" name="intervalTime" data-ng-model="defaultIntervalTime" value ="{{intervalTime.value}}"> {{intervalTime.text}}
+					</label>
+				</div>
+			</div>
+      </div>
+</div>
+		

@@ -1,0 +1,168 @@
+<section class="content-header">
+	<div class="univerge-header">
+		Student <small>Provisioning</small>
+	</div>
+	<ol class="breadcrumb">
+		<li><a href="#/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Student>Provisioning</li>
+	</ol>
+</section>
+
+
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div data-ng-include="messagePageLocation"></div>
+		</div>
+	</div>
+
+	<div class="row">
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Student Entry Form</h3>
+                </div>
+                
+                <div class="box-body">
+					<form role="form" name="changepasswordform">
+						<div class="row">
+							<div class="col-xs-5">
+								<section id="basic">
+                    
+									<div class="form-group">
+										<label>Student ID<span class="mandatory">*</span></label>
+										<input type="text" id="oid" class="form-control" placeholder="Enter Login ID" data-ng-model="student.oid" data-ng-disabled="!isNewStudent" />
+									</div>
+									<div class="form-group">
+										<label>Batch<span class="mandatory">*</span></label>
+										<select data-ng-model="student.batch" ui-select2 class="form-control" style="padding: 0px;" data-placeholder="Select Status">
+			                               	<option>1st</option>
+			                               	<option>2nd</option>
+			                               	<option>3rd</option>
+			                               	<option>4th</option>
+			                               	<option>5th</option>
+			                               	<option>6th</option>
+			                               	<option>7th</option>
+			                               	<option>8th</option>
+			                           	</select>
+									</div>
+			                    	<div class="form-group">
+										<label>Name<span class="mandatory">*</span></label>
+										<input type="text" id="name" class="form-control" placeholder="Enter Name" data-ng-model="student.name" />
+									</div>
+									<div class="form-group">
+										<label>Gender</label>
+										<input type="radio" class="margin-top-10" data-ng-model="student.gender" name="gender" value="male" > <span>Male</span>
+										<input type="radio" class=" margin-top-10" data-ng-model="student.gender" name="gender" value="female"><span> Female</span>
+									</div>
+									<div class="form-group">
+										<label>Mobile No</label>
+										<input type="text" id="mobileNo" class="form-control" placeholder="Enter phone no" data-ng-model="student.mobileNo" />
+									</div>
+									<div class="form-group">
+										<label>Email</label>
+										<input type="text" id="email" class="form-control" placeholder="Enter email" data-ng-model="student.email" />
+									</div>
+									<!-- <div data-ng-hide ="!isNewStudent" class="form-group">
+										<label>Password<span class="mandatory">*</span></label>
+										<input type="password" id="newPassword" class="form-control" placeholder="Enter Password" data-ng-model="student.password" />
+									</div>
+									<div data-ng-hide ="!isNewStudent"  class="form-group">
+										<label>Confirm Password<span class="mandatory">*</span></label>
+										<input type="password" id="confirmPassword" class="form-control" placeholder="Enter Confirm Password" data-ng-model="student.confirmPassword" />
+									</div> -->
+									<div class="form-group">
+										<label>Shift</label>
+										<input type="radio" class="margin-top-10" data-ng-model="student.shift" name="shift" value="day"> <span>Day</span>
+										<input type="radio" class="margin-top-10" data-ng-model="student.shift" name="shift" value="eve"><span> Evening</span>
+									</div>
+									<div class="form-group">
+										<label>Program<span class="mandatory">*</span></label>
+										<select data-ng-model="student.program" ui-select2 class="form-control" style="padding: 0px;" data-placeholder="Select Program">
+			                            	<option></option>
+			                               	<option value="cse">CSE</option>
+			                               	<option value="csit">CSIT</option>
+			                           	</select>
+									</div>
+								</section>
+							</div>
+							<div class="col-xs-2">
+								<section id="studentimage">
+									<div class="form-group">
+										<div class="fileinput-preview thumbnail" style="width: 150px; height: 185px;">
+											<img id="profilePic" data-ng-src="{{student.image}}" width="150px" height="180px" />
+										</div>
+										<span class="btn btn-default btn-file">
+									    	<span class="fileinput-new">Upload Image</span>
+											<input type="file" ng-file-select name="upload" accept="image/*" ng-file-change="upload($files)" />
+								    	</span>
+									</div>
+									
+								</section>
+							</div>
+							<div class="col-md-5">
+								<div ng-repeat="application in featureJSON.children " >
+									<div class ="row">
+										<div class="box box-primary">
+											<div class="box-header with-border">
+												<h4 class="box-title"><b>{{application.text }}</b></h4>
+											</div>
+											<div class="box-body">
+												<div class="inner">
+													<div ng-repeat="mainMenu in application.children">
+														<div class="box-header with-border">
+															<i data-ng-click="minus = true" data-ng-show="!minus"  data-toggle="collapse" data-target="#{{mainMenu.id+1}}" class="fa fa-plus-circle collapse-expand-sign" aria-hidden="true"></i>
+															<i data-ng-click="minus = false" data-ng-show="minus"  data-toggle="collapse" data-target="#{{mainMenu.id+1}}" class="fa fa-minus-circle collapse-expand-sign" aria-hidden="true"></i>
+															<spna data-ng-click="generateJson(mainMenu);" data-toggle="tooltip" data-placement="right" title="click to change status">
+																<input class="pull-left margin-left-10" type="checkbox" data-ng-checked ="{{mainMenu.enable}}" id ="{{mainMenu.id}}"></input>
+															</spna>
+														    <h5 class="box-title font-size-14"><b>{{mainMenu.text}}</b></h5>
+														</div>
+														<div id="{{mainMenu.id+1}}" class="inner margin-left-20 collapse">
+															<div ng-repeat="menu in mainMenu.children">
+																<i data-ng-click="minus2 = true"  data-ng-show="!minus2 && menu.children.length > 0 " data-toggle="collapse" data-target="#{{menu.id+1}}" class="fa fa-plus-circle collapse-expand-sign2" aria-hidden="true"></i>
+																<i data-ng-click="minus2 = false"  data-ng-show="minus2 && menu.children.length > 0 " data-toggle="collapse" data-target="#{{menu.id+1}}" class="fa fa-minus-circle collapse-expand-sign2" aria-hidden="true"></i>
+																<span data-ng-click="generateJson(menu);" title="click to change status" class="link-pointer">
+																	<label for="{{menu.id}}"><i ng-class="{true:'fa fa-check green', false:'fa fa-times'}[menu.enable]"></i></label>
+																 	<input class="display-none" data-ng-checked ="{{menu.enable}}" type="checkbox" id ="{{menu.id}}">{{menu.text}}</input>
+																</span>
+																<div id="{{menu.id+1}}" class="inner margin-left-20 collapse">
+																	<div  class="margin-left-20" ng-repeat="subMenu in menu.children">
+																		<span data-ng-click="generateJson(subMenu);" title="click to change status" class="link-pointer">
+																			<label for="{{subMenu.id}}"><i ng-class="{true:'fa fa-check green', false:'fa fa-times'}[subMenu.enable]"></i></label>
+																			<input class="display-none" type="checkbox" data-ng-checked ="{{subMenu.enable}}" id ="{{subMenu.id}}">{{subMenu.text}}</input>
+																		</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>	  
+												</div>
+											</div>
+										</div>
+									</div>
+                				</div>
+                			</div>
+						</div>
+						<ul id="root"></ul>
+						<div class="form-group">
+							<button class="btn btn-default" data-ng-click="resetStudent()">Reset</button>
+							<button type="submit" class="btn btn-primary" data-ng-click="saveStudent(student)">{{btnSave}}</button>
+						</div>
+                	</form>
+				</div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+		ul {
+		    list-style: none;
+		    padding: 0;
+		    margin: 0;
+		}
+		ul ul {
+		    margin: 0 0 0 30px;
+	}
+	</style>
+

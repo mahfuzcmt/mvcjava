@@ -1,0 +1,4 @@
+include 'ns-webcore','ns-security','ns-student', 'ns-teacher', 'ns-course', 'ns-routine', 'ns-registration','ns-web'
+
+
+

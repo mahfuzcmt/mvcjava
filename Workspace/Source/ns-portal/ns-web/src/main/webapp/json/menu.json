@@ -1,0 +1,576 @@
+[
+  {
+    "id": "dashboard",
+    "url": "dashboard",
+    "text": "Dashboard",
+    "class": "fa fa-dashboard",
+	"enable": false,
+    "child": []
+  },
+  {
+    "id": "management",
+    "url": "management",
+    "text": "Management",
+    "class": "fa fa-users",
+  	"enable": false,
+    "child": [
+      {
+        "id": "management",
+        "url": "management",
+        "text": "Nodes",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "listNodes",
+              "url": "listNodes",
+              "text": "List Nodes",
+			  "enable": true,
+              "class": "fa fa-hand-o-right",
+               "child": []
+            }
+          ]
+      },
+      {
+        "id": "underConstruction",
+        "url": "underConstruction",
+        "text": "Partners",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "listPartners",
+              "url": "listPartners",
+              "text": "List Partners",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "PartnersTransaction",
+              "url": "PartnersTransaction",
+              "text": "Transaction of Partner",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "balanceUpdate",
+              "url": "balanceUpdate",
+              "text": "Balance Update",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+      {
+        "id": "trunks",
+        "url": "trunks",
+        "text": "Trunks",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "listTrunks",
+              "url": "listTrunks",
+              "text": "List Trunks",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	   {
+        "id": "prefixes",
+        "url": "prefixes",
+        "text": "Prefixes",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "national",
+              "url": "national",
+              "text": "National",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "listNATPrefixes",
+              "url": "listNATPrefixes",
+              "text": "List NAT Prefixes",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	  {
+        "id": "countriesOrRegions",
+        "url": "countriesOrRegions",
+        "text": "Countries/Regions",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "listCountriesOrRegions",
+              "url": "listCountriesOrRegions",
+              "text": "List Countries/Regions",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	  {
+        "id": "btrcRates",
+        "url": "btrcRates",
+        "text": "BTRC Rates",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "outgoingXRates",
+              "url": "outgoingXRates",
+              "text": "Outgoing X rates",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "outgoingYRates",
+              "url": "outgoingYRates",
+              "text": "Outgoing Y rates",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	  {
+        "id": "reRating",
+        "url": "reRating",
+        "text": "Rerating",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "unrateCalls",
+              "url": "unrateCalls",
+              "text": "Unrate Calls",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "reRateInOutCalls",
+              "url": "reRateInOutCalls",
+              "text": "Rerate In/Out Calls",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "rerateFailedcallByDatetime",
+              "url": "rerateFailedcallByDatetime",
+              "text": "Rerate Failedcall By Datetime",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	  {
+        "id": "rateSheets",
+        "url": "rateSheets",
+        "text": "RateSheets",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "international",
+              "url": "international",
+              "text": "International",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "uploadRateSheet",
+              "url": "uploadRateSheet",
+              "text": "Upload RateSheet",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "manageRateSheet",
+              "url": "manageRateSheet",
+              "text": "Manage RateSheet",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "transit",
+              "url": "transit",
+              "text": "Transit",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+			{
+              "id": "nationalRateSheet",
+              "url": "nationalRateSheet",
+              "text": "National RateSheet",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+			
+          ]
+      },
+	  {
+        "id": "currency",
+        "url": "currency",
+        "text": "Currency",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "manageCurrency",
+              "url": "manageCurrency",
+              "text": "Manage Currency",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+			
+          ]
+      },
+	  {
+        "id": "security",
+        "url": "security",
+        "text": "Security",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+		 "child": [
+            {
+              "id": "listUser",
+              "url": "listUser",
+              "text": "List User",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+			
+          ]
+      }
+    ]
+  },
+  {
+    "id": "report",
+    "url": "report",
+    "text": "Report",
+    "enable": true,
+    "class": "fa fa-file-text-o",
+    "child": [
+      {
+        "id": "iosReports",
+        "url": "iosReports",
+        "text": "IOS Reports",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "callVolumeIOSIncoming",
+              "url": "callVolumeIOSIncoming",
+              "text": "Call Volume IOS Incoming",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "callVolumeIOSOutgoing",
+              "url": "callVolumeIOSOutgoing",
+              "text": "Call Volume IOS Outgoing",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "callDetailsIOS",
+              "url": "callDetailsIOS",
+              "text": "Call Details IOS",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+      {
+         "id": "btrcReports",
+         "url": "btrcReports",
+          "text": "BTRC Reports",
+		  "enable": true,
+         "class": "fa fa-hand-o-right",
+         "child": [
+            {
+              "id": "callVolumeMonthly",
+              "url": "callVolumeMonthly",
+              "text": "Call Volume Monthly",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "callSummary",
+              "url": "callSummary",
+              "text": "Call Summary",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+      {
+        "id": "callReports",
+        "url": "callReports",
+        "text": "Call Reports",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "callDetails",
+              "url": "callDetails",
+              "text": "Call Details",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "dailyReport",
+              "url": "dailyReport",
+              "text": "Daily Report",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "hourwiseReport",
+              "url": "hourwiseReport",
+              "text": "Hourwise Report",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+      {
+        "id": "rateReports",
+        "url": "rateReports",
+        "text": "Rate Reports",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "rateReport",
+              "url": "rateReport",
+              "text": "Rate Report",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "lcrReport",
+              "url": "lcrReport",
+              "text": "LCR Report",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	  {
+        "id": "callVolumeReports",
+        "url": "callVolumeReports",
+        "text": "Call Volume Reports",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "callVolumeByPartner",
+              "url": "callVolumeByPartner",
+              "text": "Call Volume by Partner",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "callVolumebyICX",
+              "url": "callVolumebyICX",
+              "text": "Call Volume by ICX",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+             {
+              "id": "callVolumeByANS",
+              "url": "callVolumeByANS",
+              "text": "Call Volume by ANS",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+             {
+              "id": "outgoingByINTRate",
+              "url": "outgoingByINTRate",
+              "text": "Outgoing by INTRate",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "callVolumeByPrefix",
+              "url": "callVolumeByPrefix",
+              "text": "Call Volume by Prefix",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "failedCDRReport",
+              "url": "failedCDRReport",
+              "text": "Failed CDR Report",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+	  {
+        "id": "financialReports",
+        "url": "financialReports",
+        "text": "Financial Reports",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+               "id": "profitOrLossOutgoing",
+                "url": "profitOrLossOutgoing",
+                "text": "Profit/Loss Outgoing",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            }
+          ]
+      },{
+        "id": "performanceReports",
+        "url": "performanceReports",
+        "text": "Performance Reports",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+               "id": "performanceIncoming",
+                "url": "performanceIncoming",
+                "text": "Performance Incoming",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            },
+             {
+               "id": "performanceOutgoing",
+                "url": "performanceOutgoing",
+                "text": "Performance Outgoing",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            },
+             {
+               "id": "cerReport",
+                "url": "cerReport",
+                "text": "CER Report",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            },
+             {
+               "id": "ccrReport",
+                "url": "ccrReport",
+                "text": "CCR Report",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            },
+             {
+               "id": "ccrMainReport",
+                "url": "ccrMainReport",
+                "text": "CCR Main Report",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            },
+            {
+               "id": "ccrDetailReport",
+                "url": "ccrDetailReport",
+                "text": "CCR Detail Reportt",
+				"enable": true,
+                "class": "fa fa-hand-o-right"
+            }
+          ]
+      }
+    ]
+  },{
+    "id": "billing",
+    "url": "billing",
+    "text": "Billing",
+    "enable": true,
+    "class": "fa fa-calculator",
+    "child": [
+      {
+        "id": "nodes",
+        "url": "nodes",
+        "text": "Nodes",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "listNodes",
+              "url": "listNodes",
+              "text": "List Nodes",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+      {
+        "id": "partners",
+        "url": "partners",
+        "text": "Partners",
+		"enable": true,
+        "class": "fa fa-hand-o-right",
+        "child": [
+            {
+              "id": "listPartners",
+              "url": "listPartners",
+              "text": "List Partners",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "PartnersTransaction",
+              "url": "PartnersTransaction",
+              "text": "Transaction of Partner",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            },
+            {
+              "id": "balanceUpdate",
+              "url": "balanceUpdate",
+              "text": "Balance Update",
+			  "enable": true,
+              "class": "fa fa-hand-o-right"
+            }
+          ]
+      },
+      {
+        "id": "trunks",
+        "url": "trunks",
+        "text": "Trunks",
+		"enable": true,
+        "class": "fa fa-hand-o-right"
+      }
+    ]
+  },
+  {
+    "id": "statistics",
+    "url": "statistics",
+    "text": "Statistics",
+    "enable": true,
+    "class": "fa fa-line-chart",
+    "child": [
+      {
+        "id": "liveBalance",
+        "url": "liveBalance",
+        "text": "Live Balance",
+		"enable": true,
+        "class": "fa fa-hand-o-right"
+      },
+      {
+        "id": "systemStatus",
+        "url": "systemStatus",
+        "text": "System Status",
+		"enable": true,
+        "class": "fa fa-hand-o-right"
+      },
+      {
+        "id": "liveCallVolume",
+        "url": "liveCallVolume",
+        "text": "Live Call Volume",
+		"enable": true,
+        "class": "fa fa-hand-o-right"
+      }
+    ]
+  }
+]

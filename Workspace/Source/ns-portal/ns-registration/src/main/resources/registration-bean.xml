@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- Manager Classes --> 	
+	<bean id="registrationQueryManager" class="edu.vub.ns.registration.manager.impl.RegistrationMySqlQueryManagerImpl" parent="queryManager" />
+	
+    <bean id="registrationManager" class="edu.vub.ns.registration.manager.impl.RegistrationManagerImpl" parent="manager">
+        <property name="registrationQueryManager" 				ref="registrationQueryManager"/>  
+    </bean>
+	 
+	<bean id="registrationService" class="edu.vub.ns.registration.rest.service.RegistrationService">
+	    <property name="registrationManager" 				ref="registrationManager"/>  
+	</bean>
+</beans>
+

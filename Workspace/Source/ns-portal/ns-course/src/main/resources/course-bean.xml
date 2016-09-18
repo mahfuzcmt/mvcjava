@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+	<!-- Manager Classes --> 	
+	<bean id="courseQueryManager" class="edu.vub.ns.course.manager.impl.CourseMySqlQueryManagerImpl" parent="queryManager" />
+	
+    <bean id="courseManager" class="edu.vub.ns.course.manager.impl.CourseManagerImpl" parent="manager">
+        <property name="courseQueryManager" 				ref="courseQueryManager"/>  
+    </bean>
+	 
+	<bean id="courseService" class="edu.vub.ns.course.rest.service.CourseService">
+	    <property name="courseManager" 				ref="courseManager"/>  
+	</bean>
+</beans>
+

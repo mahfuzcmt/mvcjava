@@ -1,0 +1,7 @@
+[
+	{"text": "3 sec", "value" : 3000},
+	{"text": "5 sec", "value" : 5000},
+	{"text": "10 sec", "value" : 10000},
+	{"text": "15 sec", "value" : 15000},
+	{"text": "20 sec", "value" : 20000}
+]

@@ -1,0 +1,19 @@
+<!-- <nav ng-if="pages.length >= 2">
+  <ul class="pagination">
+    <li><a ng-click="selectPage(1)">First</a>
+    </li><li><a ng-click="selectPage(currentPage - 1)">&lt;</a>
+    </li><li><a><page-select></page-select> of {{numPages}}</a>
+    </li><li><a ng-click="selectPage(currentPage + 1)">&gt;</a>
+    </li><li><a ng-click="selectPage(numPages)">Last</a></li>
+  </ul>
+</nav> -->
+
+<nav ng-if="pages.length >= 2">
+  <span class="pagination-info itemCount">{{(currentPage-1)*stItemsByPage+1}}-{{currentPage*stItemsByPage}} of {{numPages*stItemsByPage}} Records</span>
+  <div class="btn-group">
+    <a href="" type="button" class="btn paginate-left-btn" ng-class="{'disabled': currentPage==1}" ng-click="selectPage(currentPage-1)"> <i class="glyphicon glyphicon-chevron-left"></i>
+    </a>
+    <a href="" type="button" class="btn paginate-right-btn" ng-class="{'disabled': currentPage==numPages}" ng-click="selectPage(currentPage+1)"> <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+  </div>
+</nav>

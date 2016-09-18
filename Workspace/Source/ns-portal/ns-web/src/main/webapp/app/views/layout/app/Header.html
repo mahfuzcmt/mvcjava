@@ -1,0 +1,53 @@
+
+<div class="logo navbar-left">
+   NS
+</div>
+<nav class="navbar navbar-static-top" role="navigation" data-ng-controller="appHeaderController">
+    <a  class="navbar-btn sidebar-toggle link-pointer" data-toggle="offcanvas" role="button" data-ng-click="menuToggle()">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </a>
+    <div class="navbar-right">
+        <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu" data-ng-click="userToggle()" id="userToggle">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <span>{{userInfo.name}} <i class="caret"></i></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="user-header bg-light-blue">
+                        <img data-ng-show="userInfo.imagePath" data-ng-src="{{userInfo.imagePath}}" class="img-circle" alt="User Image" />
+                        <img data-ng-show="!userInfo.imagePath" data-ng-src="images/user/DTL-Admin.png" class="img-circle" alt="User Image" />
+                        <p style="margin: 0 0 0px !important;">{{userInfo.roleID}}</p>
+                        <p style="margin: 0 0 0px !important;">{{userInfo.loginID}}</p>
+                        <p style="margin: 0 0 0px !important;">{{userInfo.name}}</p>
+                        <p style="margin: 0 0 0px !important;">{{userInfo.phoneno}}</p>
+                    </li>
+                    <li class="user-footer">
+                        <div class="pull-left padding-left-2">
+                            <a data-ng-click="gotoNewPage()" class="btn btn-default btn-sm">Profile</a>
+                        </div>
+                         <div class="pull-left padding-left-2" >
+                            <a data-ng-click="gotoNewPage('changePassword')" class="btn btn-default btn-sm">Change Password</a>
+                        </div>
+                        <div class="pull-left padding-left-2">
+                            <a  data-ng-click="logout()" class="btn btn-default btn-sm">Sign out</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+<script type="text/javascript">
+	$(function() {
+		"use strict";
+	    $(".navbar .menu").slimscroll({
+	        height: "200px",
+	        alwaysVisible: false,
+	        size: "3px"
+	    }).css("width", "100%");
+	});
+</script>

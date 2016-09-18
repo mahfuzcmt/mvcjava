@@ -1,0 +1,16 @@
+
+
+<div class="modal-header">
+	<h4 class="modal-title ng-binding">
+		<span class="glyphicon glyphicon-check"></span> {{modalOptions.headerText}}
+	</h4>
+</div>
+
+<div class="modal-body">
+  <p>{{modalOptions.bodyText}}</p>
+</div>
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-default btn-sm" data-ng-click="modalOptions.close()">{{modalOptions.closeButtonText}}</button>
+  <button class="btn btn-primary" data-ng-click="modalOptions.ok(modalOptions);">{{modalOptions.actionButtonText}}</button>
+</div>
